@@ -1,0 +1,13 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<%= form_for @user do |f| %>
+    Name: <%= f.text_field :name %><br>
+    Height: <%= f.text_field :height %><br>
+    Happiness: <%= f.text_field :happiness %><br>
+    Nausea: <%= f.text_field :nausea %><br>
+    Tickets: <%= f.text_field :tickets %><br>
+    Create Password: <%= f.password_field :password %><br>
+    Admin: <%= f.check_box :admin %>
+    <%= f.submit %>
+<% end %>
