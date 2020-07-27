@@ -1,0 +1,11 @@
+<%=form_tag({:controller =>'session',:action=>'signin', :method =>'post'}) do%>
+<label>Your name:</label><br>
+
+<%=select_tag "user_name", options_from_collection_for_select(@users, "id", "name"), include_blank: "Please select your username from this dropdown"
+%><br>
+<label>Your password:</label><br>
+<%=text_field_tag 'password' ,id="password" %><br><br>
+<%=submit_tag " Sign In"%>
+<%end%>
+
+
