@@ -9,10 +9,8 @@ class SessionController <  ApplicationController
        @user=User.find_by(id:params[:user_name]) 
        if @user.present?
          session[:user_id] = @user.id
-         redirect_to  user_path(@user)
          flash[:notice] = " successfully signed in"
-
-         #redirect_to  controller:"users",action: 'show'
+         redirect_to  user_path(@user)
        end        
     
     end
