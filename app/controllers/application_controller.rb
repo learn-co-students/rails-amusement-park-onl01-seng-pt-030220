@@ -1,12 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  #before_action :session_init
-
-
-  #def session_init
-   # session[:init] = true
-  #end
-
+  helper_method :current_user
    
 
     def current_user

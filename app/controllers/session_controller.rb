@@ -10,7 +10,9 @@ class SessionController <  ApplicationController
        if @user.present?
          session[:user_id] = @user.id
          redirect_to  user_path(@user)
-         #redirect_to controller:'users',action: 'show'
+         flash[:notice] = " successfully signed in"
+
+         #redirect_to  controller:"users",action: 'show'
        end        
     
     end

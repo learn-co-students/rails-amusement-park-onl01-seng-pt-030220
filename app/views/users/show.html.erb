@@ -1,4 +1,7 @@
 
+  <% if flash[:aaa] %>
+    <div class="notice"><%= flash[:aaa] %></div>
+  <% end %>
 
 <%if @user.admin == true%>
  <p><strong>ADMIN</p>
