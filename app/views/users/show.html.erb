@@ -1,0 +1,18 @@
+<% if @user.admin == true %>
+  <h1>ADMIN: <%= @user.name %></h1>
+  <p>Mood: </p>
+  <% else %>
+  <h1>User: <%= @user.name %></h1>
+  <p>Mood: <%= @user.mood %></p>
+<% end %>
+
+<% flash.each do |key, message| %>
+  <%= message %>
+<% end %>
+
+<p>Tickets: <%= @user.tickets %></p>
+<p>Height: <%= @user.height %></p>
+
+<%= link_to "See attractions", attractions_path %>
+
+<%= link_to "Log Out", signout_path %>
