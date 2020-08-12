@@ -1,0 +1,11 @@
+<h1>Signin</h1>
+
+<%= form_with do |f| %>
+  <%= f.label "Your name:" %>
+  <%= f.collection_select(:user_name, User.all, :name, :name, :include_blank => "Please select your username")%>
+
+  <%= f.label "Your password:" %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Sign In" %>
+<% end %>
